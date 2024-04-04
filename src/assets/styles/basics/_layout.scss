@@ -1,0 +1,30 @@
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr  100%;
+    grid-template-rows: calc(100vh - 16px);
+    gap: 8px;
+    padding: 8px;
+
+
+    >* {
+        // grid-column: 2;
+
+        &.full {
+            grid-column: 1 /-1;
+        }
+    }
+
+    // @include for-normal-layout {
+    //     grid-template-columns: $mainMarginNarrow 1fr $mainMarginNarrow;
+    // }
+
+    // @include for-wide-layout {
+    //     grid-template-columns: 1fr  1fr;
+    // }
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    grid-gap: 30px;
+}

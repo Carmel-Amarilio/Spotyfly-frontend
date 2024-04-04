@@ -1,0 +1,23 @@
+
+.mini-profile {
+    width: 24px;
+}
+
+.no-profile {
+   font-size: 90px;
+   margin: auto;
+   text-align: center;
+   background-color: $txtClr2;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+}
+
+.mini-no-profile {
+   font-size: 20px;
+   text-align: center;
+   background-color: $BGC2;
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+}
