@@ -6,21 +6,29 @@
     </div>
 
     <article class="nav-btn flex column gap20">
-      <RouterLink class="nome-btn flex align-center gap20" to="/station" @click="onGoTo('station')">
+      <RouterLink
+        class="nome-btn flex align-center gap20"
+        to="/station"
+        @click="onGoTo('station')"
+      >
         <img v-if="page === 'station'" src="../assets/icons/home1.png" />
         <img v-if="page != 'station'" src="../assets/icons/home2.png" />
-        <p :class="{ 'active': page != 'station' }">Home</p>
+        <p :class="{ active: page != 'station' }">Home</p>
       </RouterLink>
-      <RouterLink class="search-btn flex align-center gap20" to="/search" @click="onGoTo('search')">
+      <RouterLink
+        class="search-btn flex align-center gap20"
+        to="/search"
+        @click="onGoTo('search')"
+      >
         <img v-if="page === 'search'" src="../assets/icons/search1.png" />
         <img v-if="page != 'search'" src="../assets/icons/search2.png" />
-        <p :class="{ 'active': page != 'search' }">Search</p>
+        <p :class="{ active: page != 'search' }">Search</p>
       </RouterLink>
     </article>
   </section>
 </template>
   
-<script>
+<script lang="ts">
 export default {
   data() {
     return {
@@ -28,14 +36,16 @@ export default {
     };
   },
   methods: {
-    onGoTo(to) {
-      this.page = to
+    onGoTo(to: string) {
+      this.page = to;
     },
   },
   computed: {},
-  async created() {
-    const p = this.$route.name; 
-    console.log(p);
+  mounted() {
+    setTimeout(() => {
+      const path = this.$route.name;
+      this.page = path;
+    }, 10);
   },
 };
 </script>
@@ -65,7 +75,7 @@ export default {
       width: 24px;
     }
 
-    .active{
+    .active {
       color: $txtClr2;
     }
   }

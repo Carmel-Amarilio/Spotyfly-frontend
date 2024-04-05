@@ -1,13 +1,17 @@
 <template>
   <section class="search">
     <SearchHeader />
-    <h1>search</h1>
   </section>
 </template>
 
-<script>
-import SearchHeader from "@/cmps/search/SearchHeader.vue";
+<script lang="ts">
+import SearchHeader from "../cmps/search/SearchHeader.vue";
 export default {
+  data() {
+    return {
+      search: "",
+    };
+  },
   components: {
     SearchHeader,
   },

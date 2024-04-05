@@ -4,9 +4,9 @@
   </section>
 </template>
 
-<script>
+<scrip lang="ts">
 export default {};
-</script>
+</scrip>
 
 <style lang="scss">
 @import "../assets/styles/setup/_variables.scss";

@@ -4,13 +4,13 @@
   </section>
 </template>
 
-<script >
+<script lang="ts">
 </script>
 
 <style lang="scss">
 @import "../assets/styles/setup/_variables.scss";
 
-.home{
+.home {
   background-color: $BGC2;
 }
 </style>
